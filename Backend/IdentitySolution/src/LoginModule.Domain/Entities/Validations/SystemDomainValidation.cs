@@ -2,9 +2,9 @@
 
 namespace LoginModule.Domain.Entities.Validations
 {
-	public class DomainValidation : AbstractValidator<Domain>
+	public class SystemDomainValidation : AbstractValidator<SystemDomain>
 	{
-		public DomainValidation()
+		public SystemDomainValidation()
 		{
 			RuleFor(c => c.DomainName)
 				.NotEmpty().WithMessage("O nome do domínio é obrigatório.")
