@@ -7,7 +7,8 @@ namespace LoginModule.Domain.Services
 	public class UserService : BaseService, IUserService
 	{
 		private readonly IUserRepository _userRepository;
-		public UserService(IUserRepository userRepository)
+		public UserService(IUserRepository userRepository,
+						   INotifier notifier) : base(notifier)
 		{
 			_userRepository = userRepository;
 		}

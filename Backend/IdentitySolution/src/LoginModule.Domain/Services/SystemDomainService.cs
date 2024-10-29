@@ -9,8 +9,9 @@ namespace LoginModule.Domain.Services
 	{
 		private readonly ISystemDomainRepository _systemDomainRepository;
 
-        public SystemDomainService(ISystemDomainRepository systemDomainRepository)
-        {
+        public SystemDomainService(ISystemDomainRepository systemDomainRepository,
+								   INotifier notifier) : base(notifier)
+		{
 			_systemDomainRepository = systemDomainRepository;
         }
 

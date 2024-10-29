@@ -8,7 +8,8 @@ namespace LoginModule.Domain.Services
 	{
 		private readonly IClientRepository _clientRepository;
 
-		public ClientService(IClientRepository clientRepository)
+		public ClientService(IClientRepository clientRepository,
+						     INotifier notifier) : base(notifier)
 		{
 			_clientRepository = clientRepository;
 		}

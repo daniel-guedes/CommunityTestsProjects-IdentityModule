@@ -8,7 +8,8 @@ namespace LoginModule.Domain.Services
 	{
 		private readonly IPermissionRepository _permissionRepository;
 
-		public PermissionService(IPermissionRepository permissionRepository)
+		public PermissionService(IPermissionRepository permissionRepository,
+								INotifier notifier) : base(notifier)
 		{
 			_permissionRepository = permissionRepository;
 		}

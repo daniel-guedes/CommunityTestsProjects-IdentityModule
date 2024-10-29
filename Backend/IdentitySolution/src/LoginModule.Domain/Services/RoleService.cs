@@ -9,7 +9,8 @@ namespace LoginModule.Domain.Services
 	{
 		private readonly IRoleRepository _roleRepository;
 
-		public RoleService(IRoleRepository roleRepository)
+		public RoleService(IRoleRepository roleRepository,
+						  INotifier notifier) : base(notifier)
 		{
 			_roleRepository = roleRepository;
 		}
